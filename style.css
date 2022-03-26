@@ -1,0 +1,139 @@
+*
+{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgb(9, 11, 14);
+}
+.Scanning{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center ;
+}
+.Fingerprint{
+    position: relative;
+    width: 300px;
+    height: 380px;
+    background: url(media/fingerPrint_01.png);
+    background-size: 300px;
+
+}
+.Fingerprint::before{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background:url(media/fingerPrint_02.png) ;
+      filter: drop-shadow(0 0 20px #3fefef )  drop-shadow(0 0 80px #58c4c4 ) ;
+
+      background-size: 300px;
+      animation: animation 4s  ease-in-out infinite;
+
+}
+@keyframes  animation{
+    0%,100%
+    {
+        height: 0%;
+    }
+    50%
+    {
+        height: 100%;
+    }
+}
+.Fingerprint::after{
+    content: '';
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 7px;
+    background: #3fefef;
+    border-radius: 8px;
+    filter: drop-shadow(0 0 20px #5de669 )  drop-shadow(0 0 60px #5aeb5a ) ;
+    animation: animation-line 4s  ease-in-out infinite;  
+
+}
+@keyframes  animation-line{
+    0%,100%
+    {
+        top: 0%;
+    }
+    50%
+    {
+        top: 100%;
+
+    }
+}
+
+/* .scandiv::after{
+    content: '';
+    position:absolute;
+     background-color: black;
+    color: #3fefef;
+    filter: drop-shadow(0 0 20px #3fefef )  drop-shadow(0 0 80px #58c4c4 ) ;
+    animation: text 0.5s  steps(1) infinite;  
+}
+@keyframes  text{
+    0%,100%
+    {
+        left: 0%;
+    }
+    50%
+    {
+        left: 100%;
+
+    }
+} */
+
+/* .scan::before{
+    content: '';
+    position:absolute;
+    color: red;
+    top: 91%;
+    left: 0;
+    width: 2px;
+    height: 8%;
+    background: #dfdfdf;
+    border-radius: 8px;
+    filter: drop-shadow(0 0 20px #5de669 )  drop-shadow(0 0 60px #5aeb5a ) ;
+    animation: animation-line1 4s  ease-in-out infinite;  
+
+}            */
+
+.scan::before {
+    
+    
+    color: #cbd81b;
+    text-transform: capitalize;
+    
+    border-radius: 8px;
+    filter: drop-shadow(0 0 20px #14cc23 )  drop-shadow(0 0 60px #0a8f0a ) ;
+    animation: text 4s  ease-in-out infinite; 
+
+}
+
+
+@keyframes  text{
+    0%,100%
+    {
+        opacity: 0;
+    }
+    50%
+    {
+        opacity: 1;
+
+    }
+}
+.scandiv{
+    color: #3fefef;
+}
